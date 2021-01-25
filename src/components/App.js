@@ -1,9 +1,13 @@
 import React from 'react';
+import RecipeComponent from '../components/RecipeComponent';
 
-const App = () => (
-  <div>
-    <p>Hello</p>
-  </div>
-)
-
-export default App;
+export default function App() {
+  return (
+    <section>
+      <h1>Recipes</h1>
+      <div className='content'>
+        <RecipeComponent />
+      </div>
+    </section>
+  );
+}
