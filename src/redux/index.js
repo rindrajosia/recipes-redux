@@ -48,6 +48,13 @@ export const fetchCategoriesFailure = error =>  {
   }
 }
 
+export const changeFilter = filter => ({
+  type: CHANGE_FILTER,
+  payload: {
+    filter,
+  },
+});
+
 export const fetchRecipes = () =>  {
   return (dispatch) =>  {
     dispatch(fetchRecipesRequest);
