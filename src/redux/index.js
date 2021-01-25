@@ -47,3 +47,22 @@ export const fetchCategoriesFailure = error =>  {
     payload: error
   }
 }
+
+export const fetchRecipes = () =>  {
+  return (dispatch) =>  {
+    dispatch(fetchRecipesRequest);
+    return fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
+    .then((response) =>  {
+      if(!response.ok) {
+        throw new Error('Error - 404 not found')
+      }
+      return response.json();
+    })
+    .then((data) => {
+      dispatch(fetchRecipesSuccess(data.meals));
+    })
+    .catch((error) => {
+      dispatch(fetchRecipesFailure(error));
+    })
+  }
+}
