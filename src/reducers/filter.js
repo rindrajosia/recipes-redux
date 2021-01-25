@@ -1,4 +1,4 @@
-import { CHANGE_FILTER } from '../redux/actionTypes';
+import { CHANGE_FILTER } from '../actions/actionTypes';
 import { CATEGORY_FILTERS } from '../constants';
 
 const initialState = CATEGORY_FILTERS.ALL;

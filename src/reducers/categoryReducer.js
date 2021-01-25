@@ -2,7 +2,7 @@ import {
   FETCH_CATEGORIES_REQUEST,
   FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE
-} from '../redux/actionTypes';
+} from '../actions/actionTypes';
 
 const initialState = {
   loading: false,
