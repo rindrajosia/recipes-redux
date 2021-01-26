@@ -1,5 +1,4 @@
 import React from 'react';
-import Gallery from '../assets/images/gallery-1.jpg';
 import { useLocation, useHistory } from 'react-router';
 
 
