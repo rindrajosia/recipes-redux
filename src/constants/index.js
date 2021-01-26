@@ -4,11 +4,11 @@ export const CATEGORY_FILTERS = {
 
 export const FILTER = [
   'All',
-  'Side',
-  'Vegetarian',
-  'Dessert',
-  'Pork',
-  'Beef',
-  'Lamb',
-  'Seafood',
+  'Action',
+  'Biography',
+  'History',
+  'Horror',
+  'Kids',
+  'Learning',
+  'Sci-Fi',
 ];

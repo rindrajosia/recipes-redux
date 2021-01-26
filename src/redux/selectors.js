@@ -1,7 +1,7 @@
 import { CATEGORY_FILTERS } from '../constants';
 
 export const getRecipesState = store => store.recipe;
-export const getRecipeList = store => (getRecipesState(store) ? getRecipesState(store) : null);
+export const getRecipeList = store => (getRecipesState(store) || null);
 
 export const getRecipeByFilter = (store, filter) => {
   const allRecipes = getRecipeList(store);
@@ -11,20 +11,10 @@ export const getRecipeByFilter = (store, filter) => {
     default:
       return {
         ...allRecipes,
-        recipes: allRecipes.recipes.filter(recipe => recipe.strCategory === filter)
-      }
-  }
-};
-
-export const getRecipeById = (store, id) => {
-  const allRecipes = getRecipeList(store);
-  console.log(allRecipes);
-  console.log(id);
-  return {
-    ...allRecipes,
-    recipes: allRecipes.recipes.filter(recipe => recipe.idMeal === id)
+        recipes: allRecipes.recipes.filter(recipe => recipe.strCategory === filter),
+      };
   }
 };
 
 export const getCategoriesState = store => store.category;
-export const getCategoriesList = store => (getCategoriesState(store) ? getCategoriesState(store) : null);
+export const getCategoriesList = store => (getCategoriesState(store) || null);

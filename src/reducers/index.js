@@ -5,6 +5,6 @@ import categoryReducer from './categoryReducer';
 
 export default combineReducers({
   recipe: recipeReducer,
-  filter: filter,
-  category: categoryReducer
+  filter,
+  category: categoryReducer,
 });

@@ -1,30 +1,34 @@
 import React from 'react';
 import Gallery from '../assets/images/josia.png';
 
-
-const About = () => {
-  return(
-    <div className="small-container single-product">
-      <div className="row">
-        <div className="col-2">
-            <img className="img-single" src={Gallery} alt=""/>
-        </div>
-        <div className="col-2">
-            <h1>Rindra Josia</h1>
-            <h3>About me </h3>
-            <br/>
-            <h4>Hello, </h4>
-            <p className="instructions">
-            I am a full-stack developer that can work cross-functionally
-            between the front-end and back-end while managing multiple
-            projects ranging in priority levels. Proven experience developing
-            customer-focused websites using Ruby on Rails, PHP, CSS, HTML, ES6,
-            React and Redux. Designed and developed web applications across
-            multiple APIs and Databases. </p>
-        </div>
+const About = () => (
+  <div className="small-container single-product">
+    <div className="row">
+      <div className="col-2">
+        <img className="img-single" src={Gallery} alt="" />
+      </div>
+      <div className="col-2">
+        <h1>About</h1>
+        <h3>Project specifications </h3>
+        <br />
+        <p className="instructions">
+          This project is based on a catalogue of recipes.
+          It is not an app to help you make a recipe, it is just,
+          a browsable list of items that you can filter and access
+          to the details of one item.
+          {' '}
+        </p>
+        <p className="instructions">
+          This webapp has 3 types of pages:
+          <ul>
+            <li>- one page with a list of items that could be filtered by category;</li>
+            <li>- one page for the item details;</li>
+            <li>- one page for the Project specifications;</li>
+          </ul>
+        </p>
       </div>
     </div>
-  )
-}
+  </div>
+);
 
 export default About;
