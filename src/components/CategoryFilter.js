@@ -7,8 +7,8 @@ import { FILTER, CATEGORY_FILTERS } from '../constants';
 const CategoryFilter = ({ filter, categoriesData, fetchCategories, handleFilterChange }) => {
   useEffect (() => {
     fetchCategories();
-  }, [fetchCategories])
-  console.log(categoriesData);
+  }, [fetchCategories]);
+  
   return (
     <>
       {categoriesData.loading ? (
@@ -16,8 +16,6 @@ const CategoryFilter = ({ filter, categoriesData, fetchCategories, handleFilterC
       ) : categoriesData.error ? (
         <h2>{categoriesData.error}</h2>
       ) : (
-        <label htmlFor="category">
-          <span className="add-book">Filter Meals by category:</span>
           <select className="select" value={filter} onChange={e => { handleFilterChange(e.target.value); }} id="category" name="category" required>
             <option key={Math.floor(Math.random() * 10000)} value="All">
               All
@@ -28,7 +26,6 @@ const CategoryFilter = ({ filter, categoriesData, fetchCategories, handleFilterC
               </option>
             ))}
           </select>
-        </label>
       )}
     </>
   )
