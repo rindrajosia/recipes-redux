@@ -6,6 +6,12 @@ This webapp has 3 types of pages:
 * one page for the item details;
 * one page for the Project specifications;
 
+## Built With
+* HTML and JSX
+* React
+* CSS
+* ES6
+
 ## Getting Started:
 
 To get a local copy up and running follow these simple example steps:
