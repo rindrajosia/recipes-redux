@@ -16,5 +16,15 @@ export const getRecipeByFilter = (store, filter) => {
   }
 };
 
+export const getRecipeById = (store, id) => {
+  const allRecipes = getRecipeList(store);
+  console.log(allRecipes);
+  console.log(id);
+  return {
+    ...allRecipes,
+    recipes: allRecipes.recipes.filter(recipe => recipe.idMeal === id)
+  }
+};
+
 export const getCategoriesState = store => store.category;
 export const getCategoriesList = store => (getCategoriesState(store) ? getCategoriesState(store) : null);

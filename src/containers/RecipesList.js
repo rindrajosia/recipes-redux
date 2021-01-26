@@ -21,7 +21,7 @@ const RecipesList = ({ recipeData, fetchRecipes, changeFilter }) => {
           <h2>Recipes Categories</h2>
           <CategoryFilter handleFilterChange={handleFilterChange} />
         </div>
-        <div class="row-wrap">
+        <div className="row-wrap">
           {recipeData.loading ? (
             <h2 className="info">Loading</h2>
           ) : recipeData.error ? (

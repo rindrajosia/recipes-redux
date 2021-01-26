@@ -152,6 +152,7 @@ nav ul li {
 
 .btn:hover {
   background: #563434;
+  cursor: pointer;
 }
 
 .categories {
@@ -363,7 +364,7 @@ select:focus {
 }
 
 .single-product {
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .single-product .col-2 {
@@ -379,6 +380,10 @@ select:focus {
 .single-product .fa {
   color: #ff523b;
   margin-left: 10px;
+}
+
+.instructions {
+  text-align: justify;
 }
 
 @media only screen and (max-width: 600px) {
