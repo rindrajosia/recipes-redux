@@ -4,7 +4,7 @@ import {
   FETCH_RECIPES_FAILURE,
 } from '../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   loading: false,
   recipes: [],
   error: '',

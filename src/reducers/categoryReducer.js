@@ -4,7 +4,7 @@ import {
   FETCH_CATEGORIES_FAILURE,
 } from '../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   loading: false,
   categories: [],
   error: '',

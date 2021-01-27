@@ -1,7 +1,7 @@
 import { CHANGE_FILTER } from '../actions/actionTypes';
 import { CATEGORY_FILTERS } from '../constants';
 
-const initialState = CATEGORY_FILTERS.ALL;
+export const initialState = CATEGORY_FILTERS.ALL;
 
 const filter = (state = initialState, action) => {
   switch (action.type) {

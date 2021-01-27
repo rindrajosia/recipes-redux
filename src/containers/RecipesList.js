@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchRecipes, changeFilter } from '../actions';
+import { URL } from '../constants';
 
 import { getRecipeByFilter } from '../redux/selectors';
 import CategoryFilter from '../components/CategoryFilter';
@@ -9,7 +10,7 @@ import Recipe from '../components/Recipe';
 
 const RecipesList = ({ recipeData, fetchRecipes, changeFilter }) => {
   useEffect(() => {
-    fetchRecipes();
+    fetchRecipes(URL.RECIPES);
   }, [fetchRecipes]);
 
   const handleFilterChange = filter => {

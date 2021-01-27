@@ -35,6 +35,10 @@ To get a local copy up and running follow these simple example steps:
 
 8. Finally `npm start`.
 
+## Testing :
+
+$ npm t
+
 ## See a live demo [Here](https://recipe-rindra.herokuapp.com/)
 
 ## Show your support

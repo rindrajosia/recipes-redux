@@ -1,3 +1,4 @@
+import 'cross-fetch/polyfill';
 import {
   FETCH_RECIPES_REQUEST,
   FETCH_RECIPES_SUCCESS,
@@ -43,9 +44,9 @@ export const changeFilter = filter => ({
   },
 });
 
-export const fetchRecipes = () => dispatch => {
+export const fetchRecipes = url => dispatch => {
   dispatch(fetchRecipesRequest);
-  return fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
+  return fetch(url)
     .then(response => {
       if (!response.ok) {
         throw new Error('Error - 404 not found');
@@ -60,9 +61,9 @@ export const fetchRecipes = () => dispatch => {
     });
 };
 
-export const fetchCategories = () => dispatch => {
+export const fetchCategories = url => dispatch => {
   dispatch(fetchCategoriesRequest);
-  return fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+  return fetch(url)
     .then(response => {
       if (!response.ok) {
         throw new Error('Error - 404 not found');

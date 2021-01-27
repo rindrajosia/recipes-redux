@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchCategories } from '../actions';
 import { getCategoriesList } from '../redux/selectors';
-import { CATEGORY_FILTERS } from '../constants';
+import { CATEGORY_FILTERS, URL } from '../constants';
 
 const CategoryFilter = ({
   filter, categoriesData, fetchCategories, handleFilterChange,
 }) => {
   useEffect(() => {
-    fetchCategories();
+    fetchCategories(URL.CATEGORIES);
   }, [fetchCategories]);
 
   return (
