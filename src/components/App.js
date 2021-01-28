@@ -7,19 +7,10 @@ import About from '../containers/About';
 import Footer from '../containers/Footer';
 
 export default function App() {
-  const handleClick = () => {
-    const menuItems = document.getElementById('menu-items');
-    if (menuItems.style.height === '0px' || menuItems.style.height === '') {
-      menuItems.style.height = '70px';
-    } else {
-      menuItems.style.height = '0px';
-    }
-  };
-
   return (
     <Router>
       <section>
-        <Header clickHandler={handleClick} />
+        <Header />
         <Switch>
           <Route exact path="/" component={RecipesList} />
           <Route path="/recipe/:id" component={Recipe} />
