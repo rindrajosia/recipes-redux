@@ -45,7 +45,7 @@ const Recipe = ({ match, recipeData }) => {
 
 Recipe.propTypes = {
   match: PropTypes.objectOf(PropTypes.any).isRequired,
-  recipeData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  recipeData: PropTypes.instanceOf(Object).isRequired,
 };
 
 const mapStateToProps = state => {

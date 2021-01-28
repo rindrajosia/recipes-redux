@@ -18,14 +18,14 @@ const About = () => (
           to the details of one item.
           {' '}
         </p>
-        <p className="instructions">
+        <div className="instructions">
           This webapp has 3 types of pages:
           <ul>
             <li>- one page with a list of items that could be filtered by category;</li>
             <li>- one page for the item details;</li>
             <li>- one page for the Project specifications;</li>
           </ul>
-        </p>
+        </div>
       </div>
     </div>
   </div>

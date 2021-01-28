@@ -20,7 +20,7 @@ const Recipe = ({ recipe }) => {
 };
 
 Recipe.propTypes = {
-  recipe: PropTypes.objectOf.isRequired,
+  recipe: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Recipe;

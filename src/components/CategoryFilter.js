@@ -34,7 +34,7 @@ const CategoryFilter = ({
 
 CategoryFilter.propTypes = {
   filter: PropTypes.string,
-  categoriesData: PropTypes.objectOf.isRequired,
+  categoriesData: PropTypes.instanceOf(Object).isRequired,
   fetchCategories: PropTypes.func.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
 };
