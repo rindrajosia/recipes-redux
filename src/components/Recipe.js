@@ -12,17 +12,7 @@ const Recipe = ({ recipe }) => {
         Id:
         {idMeal}
       </p>
-      <Link
-        to={
-        {
-          pathname: '/recipe',
-          state: {
-            recipe: { ...recipe },
-          },
-        }
-      }
-        className="btn"
-      >
+      <Link to={`/recipe/${idMeal}`} className="btn">
         Explore Now
       </Link>
     </div>

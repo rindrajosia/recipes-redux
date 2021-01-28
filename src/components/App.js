@@ -22,8 +22,8 @@ export default function App() {
         <Header clickHandler={handleClick} />
         <Switch>
           <Route exact path="/" component={RecipesList} />
+          <Route path="/recipe/:id" component={Recipe} />
           <Route path="/about" component={About} />
-          <Route path="/recipe/" component={Recipe} />
         </Switch>
         <Footer />
       </section>
