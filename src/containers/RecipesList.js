@@ -5,7 +5,7 @@ import { fetchRecipes, changeFilter } from '../actions';
 import { URL } from '../constants';
 
 import { getRecipeByFilter } from '../redux/selectors';
-import CategoryFilter from '../components/CategoryFilter';
+import CategoryFilter from './CategoryFilter';
 import Recipe from '../components/Recipe';
 
 const RecipesList = ({ recipeData, fetchRecipes, changeFilter }) => {

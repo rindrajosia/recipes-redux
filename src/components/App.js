@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from '../containers/Header';
+import Header from './Header';
 import RecipesList from '../containers/RecipesList';
 import Recipe from '../containers/Single';
-import About from '../containers/About';
-import Footer from '../containers/Footer';
+import About from './About';
+import Footer from './Footer';
 
 export default function App() {
   return (
