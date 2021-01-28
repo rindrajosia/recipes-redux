@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router';
 import { getRecipeById, getRecipeList } from '../redux/selectors';
 
 const Recipe = ({ match, recipeData }) => {
-  const history = useHistory();
   const { id } = match.params;
   const details = getRecipeById(recipeData, id);
-  const goBackHandle = () => {
-    history.goBack();
-  };
   return (
     <div className="small-container single-product">
       <div className="row">
@@ -28,13 +24,13 @@ const Recipe = ({ match, recipeData }) => {
               <h3>Instructions: </h3>
               <br />
               <p className="instructions">{details.strInstructions}</p>
-              <button type="button" onClick={goBackHandle} className="btn btn-single">Go Back </button>
+              <Link to="/" className="btn">Go Back </Link>
             </div>
           </>
         ) : (
           <div className="col-4-wrap info">
             <h2>404 Pages not found </h2>
-            <button type="button" onClick={goBackHandle} className="btn btn-single">Go Back </button>
+            <Link to="/" className="btn">Go Back </Link>
           </div>
         )}
 
